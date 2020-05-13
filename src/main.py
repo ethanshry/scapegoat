@@ -11,4 +11,4 @@ def app_info():
             tmp = f'{tmp} <h5>{line}</h5>'
         return tmp
 
-run(host='localhost', port=9000)
+run(host='0.0.0.0', port=9000)
