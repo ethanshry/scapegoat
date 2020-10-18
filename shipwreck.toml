@@ -8,6 +8,7 @@ endpoint="https://github.com/ethanshry/scapegoat"
 lang="python3"
 test=""
 run="python3 ./src/main.py"
+port=9000
 
 
 [env-vars]
