@@ -5,7 +5,7 @@ def index():
 
 @route('/fancy')
 def index():
-    return "Fancy Route~~~ :)"
+    return "Fancy Route~~~ :p"
 
 @route('/app/info')
 def app_info():
