@@ -3,6 +3,10 @@ from bottle import route, run, template
 def index():
     return "Hello, Index"
 
+@route('/fancy')
+def index():
+    return "Fancy Route~~~"
+
 @route('/app/info')
 def app_info():
     with open('./src/env.txt', 'r') as env:
