@@ -1,13 +1,38 @@
 from bottle import route, run, template
+
+def makeHtml(text):
+    result = f"""
+        <body>
+        <h1>{text}<h2>
+        </body>
+        <style>
+        h1 {{
+            font-family: Arial;
+            text-align: center;
+            width: 100%;
+            text-transform: capitalize;
+        }}
+        body {{
+            background-color: pink;
+            display: flex;
+            height: 100vh;
+            flex-direction: row;
+            align-items: center;
+        }}
+        </style>
+    """
+    return result
+
+
 @route('/')
 def index():
     print("Standard")
-    return "Hello, Index"
+    return makeHtml("Hello from python")
 
-@route('/fancy')
+@route('/other')
 def index():
-    print("FANCAY")
-    return "Fancy Route~~~ :)"
+    print("other route")
+    return makeHtml("this is the other route :)")
 
 @route('/app/info')
 def app_info():
@@ -17,6 +42,6 @@ def app_info():
         for line in env.readlines():
             print("line")
             tmp = f'{tmp} <h5>{line}</h5>'
-        return tmp
+        return makeHtml(tmp)
 
 run(host='0.0.0.0', port=9000)
