@@ -29,6 +29,11 @@ def index():
     print("Standard")
     return makeHtml("Hello from python")
 
+@route('/new')
+def index():
+    print("Standard")
+    return makeHtml("Hello from the new route")
+
 @route('/other')
 def index():
     print("other route")
