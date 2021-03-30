@@ -41,7 +41,7 @@ def index():
 
 @route('/app/info')
 def app_info():
-    print("Seeking app info...")
+    print("Seeking app info....")
     with open('./src/env.txt', 'r') as env:
         tmp = '<h1> Scapegoat App Info </h1>'
         for line in env.readlines():
